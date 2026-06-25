@@ -1,93 +1,146 @@
-# Robo OS
+<div align="center">
 
-Robo OS is a small C++ desktop-style operating system simulator built around a graphical launcher and a collection of utility programs. The main application presents a custom SFML interface that can open tools such as a calculator, calendar, file utilities, notepad, music/video players, a system monitor, games, and timer/watch features.
+# 🤖 Robo OS
 
-## Highlights
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00C2FF&center=true&vCenter=true&width=750&lines=A+Lightweight+C%2B%2B+Operating+System+Simulator;Process+Management+%7C+Multitasking+%7C+System+Utilities;Built+to+Explore+Core+Operating+System+Concepts" alt="Typing SVG" />
 
-- Graphical launcher built with SFML
-- Multiple standalone utilities written in C++
-- Linux/POSIX-based process and IPC handling
-- Bundled assets for the UI and media features
-- Lightweight project that can be compiled tool by tool
+<p>
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Platform-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Project-Operating%20System%20Simulator-00C2FF?style=for-the-badge" alt="OS Simulator" />
+</p>
 
-## Project Structure
+**A lightweight C++ operating system simulator featuring process management, multitasking, system utilities, multimedia, and basic applications.**
 
-The `Robo OS/` folder contains the main launcher, the utility programs, and the assets they use.
+</div>
 
-### Main launcher
+---
 
-- `final.cpp` - the primary SFML desktop shell that opens and coordinates the app menu
+## 🚀 Overview
 
-### Utilities
+**Robo OS** is an educational operating system simulator developed in C++ to demonstrate important OS concepts through a simple graphical interface and built-in applications.
 
-- `calculator.cpp` - calculator
-- `calender.cpp` - calendar utility
-- `copy.cpp` - file copy tool
-- `compress.cpp` - file compression tool
-- `delete.cpp` - file deletion tool
-- `file.cpp` - file manager / file-related tool
-- `music.cpp` - music player
-- `notepad.cpp` - simple text editor
-- `randomnumber.cpp` - number guessing game
-- `system_monitor.cpp` - process viewer and system monitoring tool
-- `tictac.cpp` / `tictactoe.cpp` - Tic Tac Toe game code
-- `timer.cpp` - timer utility
-- `watch.cpp` - stopwatch/watch utility
-- `video.cpp` - video player
-- `hungman.cpp` - Hangman game
-- `semwork.cpp`, `worker.cpp`, `Calculators.cpp` - supporting/demo process files
+It provides a practical understanding of how processes, threads, memory, communication, and system utilities work together inside an operating-system-style environment.
 
-### Assets and runtime files
+---
 
-- `Banana.ttf` - UI font used by the launcher
-- `woods.jpg` - background image for the main window
-- `song.mp3`, `piano.mp3`, `sunset.mp4` - bundled media examples
-- `IPC.txt` - simple IPC/status file used by several tools
+## ✨ Key Features
 
-## Requirements
+- ⚙️ Process creation, execution, and termination
+- 🧵 Multitasking and multithreading
+- 💾 Memory allocation and deallocation
+- 📁 Basic file-management utilities
+- 📊 Running-process system monitor
+- 🎵 Audio and video playback
+- 🕒 Timer, stopwatch, calculator, calendar, and notepad
+- 🎮 Mini games including Tic-Tac-Toe and Hangman
+- 🔄 Startup and shutdown simulation
 
-- Linux
-- `g++` with C++17 support
-- SFML development libraries
-- Standard POSIX/Linux headers and tools used by the process-control features
+---
 
-On Debian/Ubuntu, the SFML packages are typically:
+## 🧠 OS Concepts Demonstrated
+
+```text
+Process Management
+├── Process Creation
+├── Process Control Block
+├── Application Execution
+└── Process Termination
+
+Concurrency
+├── Multitasking
+├── Multithreading
+└── Inter-Process Communication
+
+Resource Management
+├── Memory Allocation
+├── Memory Deallocation
+└── System Monitoring
+```
+
+---
+
+## 🛠️ Built With
+
+- **C++**
+- **Linux**
+- **SFML**
+- **POSIX processes and threads**
+- **Shell commands and system utilities**
+
+---
+
+## ▶️ Run Locally
+
+### 1. Clone the repository
 
 ```bash
+git clone https://github.com/your-username/robo-os.git
+cd robo-os
+```
+
+### 2. Install required dependencies
+
+```bash
+sudo apt update
 sudo apt install g++ libsfml-dev
 ```
 
-## Build and Run
-
-The launcher and the utilities are separate executables. Build the one you want from inside the `Robo OS/` directory.
-
-### Main launcher
+### 3. Compile the main program
 
 ```bash
-g++ -std=c++17 final.cpp -o robo-os \
-	-lsfml-graphics -lsfml-window -lsfml-system
-./robo-os
+g++ final.cpp -o final -lsfml-graphics -lsfml-window -lsfml-system
 ```
 
-### Example: standalone utility
+### 4. Run Robo OS
 
 ```bash
-g++ -std=c++17 calculator.cpp -o calculator
-./calculator
+chmod +x final
+./final
 ```
 
-If a tool uses SFML or additional system libraries, add the required linker flags for that file as needed.
+> Some applications may need to be compiled separately using their corresponding `.cpp` files.
 
-## How It Works
+---
 
-Robo OS is designed as a simple multi-process simulation. The main launcher opens a window with clickable tools, while some utilities communicate through shared files or Linux IPC mechanisms. Several programs write to `IPC.txt` so the launcher can coordinate their state.
+## 📸 Preview
 
-## Notes
+<div align="center">
 
-- Some filenames intentionally keep the original project spelling, such as `calender` and `hungman`.
-- The project was built for Linux desktop environments and may need adjustments on Windows or macOS.
-- Media and font files must stay alongside the executables so the launcher can load them correctly.
+<img src="assets/robo-os-preview.png" alt="Robo OS Preview" width="850" />
 
-## Suggested Next Step
+</div>
 
-If you want, I can also make this README more polished by adding badges, screenshots, and a clean table of contents, or I can help standardize the build commands for every individual `.cpp` file.
+> Add your main Robo OS screenshot inside `assets/robo-os-preview.png`.
+
+---
+
+## 👨‍💻 Project Team
+
+| Member | Role |
+|---|---|
+| **Muhammad Bilal Ashiq** | Developer |
+| **Faeiz Tariq** | Developer |
+
+**Instructor:** Ms. Mahzaib Younus  
+**Institution:** FAST-NUCES, Chiniot-Faisalabad Campus
+
+---
+
+## 📖 Project Article
+
+Read the complete project explanation on Medium:
+
+[**Robo OS — Operating System Project**](https://medium.com/@metheBilalAshiq/robo-os-operating-system-project-5b8267c85731)
+
+---
+
+<div align="center">
+
+### ⭐ Support the Project
+
+If you found this project useful, consider giving the repository a **star**.
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:001F3F,100:00C2FF&height=120&section=footer" width="100%" />
+
+</div>
